@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Balancer from 'react-wrap-balancer'
 
 import { SparkleIcon, UserSecurityIcon } from '~/assets'
-import { PeekabooLink } from '~/components/links/PeekabooLink'
 import { SocialLink } from '~/components/links/SocialLink'
 
 function Developer() {
@@ -80,7 +79,7 @@ export function Headline() {
         }}
       >
         <Balancer>
-          I'm Yuzhao Zhang, aka YJ,
+          I&apos;m Yuzhao Zhang, aka YJ,
           Welcome to my personal website!
         </Balancer>
       </motion.p>
