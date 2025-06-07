@@ -79,7 +79,7 @@ export function Headline() {
         }}
       >
         <Balancer>
-          I&apos;m Yuzhao Zhang, aka YJ,
+          I&apos;m Yuzhao Zhang, aka YJ.
           Welcome to my personal website!
         </Balancer>
       </motion.p>
