@@ -14,11 +14,11 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | YJ',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'YJ,Yuzhao Zhang,张宇钊,新加坡,开发者,设计师',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | YJ',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'YJ Personal Website',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://yuzhaoyj.com',
   },
   twitter: {
     site: '@thecalicastle',
