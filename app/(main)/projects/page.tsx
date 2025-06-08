@@ -30,7 +30,7 @@ export default function ProjectsPage() {
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           I have been doing all kinds of small projects for many years. There
           are <b>open-source</b> projects, <b>experimental</b> projects, and
-          <b>just for fun </b> projects. Here is a collection of projects that
+          <b> just for fun </b> projects. Here is a collection of projects that
           I think are good, which is also the best witness of my exploration and
           attempt in the field of technology.
         </p>
