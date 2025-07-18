@@ -25,7 +25,9 @@ export default async function BlogHomePage() {
               <PencilSwooshIcon className="h-5 w-5 flex-none" />
               <span className="ml-2">近期文章</span>
             </h2>
-            <BlogPosts />
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+              <BlogPosts />
+            </div>
           </div>
         </div>
       </Container>
