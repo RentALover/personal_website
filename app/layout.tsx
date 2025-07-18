@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'YJ,Yuzhao Zhang,张钰钊,新加坡,开发者,设计师',
+  keywords: 'YJ,Yuzhao Zhang,张钰钊, Singapore, Developer, Photographer',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
