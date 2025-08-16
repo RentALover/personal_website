@@ -26,7 +26,7 @@ export default async function BlogHomePage() {
               <span className="ml-2">近期文章</span>
             </h2>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-              <BlogPosts />
+              <BlogPosts limit={4} />
             </div>
           </div>
         </div>
