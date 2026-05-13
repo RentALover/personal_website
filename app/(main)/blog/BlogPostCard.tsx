@@ -8,11 +8,13 @@ import {
   HourglassIcon,
   ScriptIcon,
 } from '~/assets'
+import { SiteOwnerEditLink } from '~/components/SiteOwnerEditLink'
 import { prettifyNumber } from '~/lib/math'
 import { type Post } from '~/sanity/schemas/post'
 
 export function BlogPostCard({ post, views }: { post: Post; views: number }) {
-  const { title, slug, mainImage, publishedAt, categories, readingTime } = post
+  const { _id, title, slug, mainImage, publishedAt, categories, readingTime } =
+    post
 
   return (
     <Link
@@ -74,6 +76,12 @@ export function BlogPostCard({ post, views }: { post: Post; views: number }) {
           </span>
         </span>
       </span>
+
+      <SiteOwnerEditLink
+        id={_id}
+        type="post"
+        className="absolute right-3 top-3 z-30 flex h-7 w-7 items-center justify-center rounded-full bg-white/80 text-zinc-500 shadow-sm ring-1 ring-zinc-900/5 backdrop-blur-sm transition hover:bg-white hover:text-indigo-600 dark:bg-zinc-800/80 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-zinc-800 dark:hover:text-white"
+      />
     </Link>
   )
 }

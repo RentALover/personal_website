@@ -10,19 +10,17 @@ export default async function AdminPage() {
   } = await db.execute<{
     comments: number
     subscribers: number
-    guestbook: number
   }>(
-    sql`SELECT 
+    sql`SELECT
   (SELECT COUNT(*) FROM comments) as comments,
-  (SELECT COUNT(*) FROM subscribers WHERE subscribed_at IS NOT NULL) as subscribers,
-  (SELECT COUNT(*) FROM guestbook) as guestbook`
+  (SELECT COUNT(*) FROM subscribers WHERE subscribed_at IS NOT NULL) as subscribers`
   )
 
   return (
     <>
       <Title>后台仪表盘</Title>
 
-      <Grid numItemsMd={2} numItemsLg={3} className="mt-6 gap-6">
+      <Grid numItemsMd={2} numItemsLg={2} className="mt-6 gap-6">
         <Card>
           <Text>总评论</Text>
 
@@ -34,10 +32,7 @@ export default async function AdminPage() {
             <Metric>{count.subscribers}</Metric>
           )}
         </Card>
-        <Card>
-          <Text>总留言</Text>
-          {count && 'guestbook' in count && <Metric>{count.guestbook}</Metric>}
-        </Card>
+
       </Grid>
     </>
   )

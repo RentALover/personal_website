@@ -10,6 +10,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import { ExternalLinkIcon } from '~/assets'
+import { SiteOwnerEditLink } from '~/components/SiteOwnerEditLink'
 import { Card } from '~/components/ui/Card'
 import { urlForImage } from '~/sanity/lib/image'
 import { type Project } from '~/sanity/schemas/project'
@@ -60,6 +61,12 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="mr-2">{new URL(url).host}</span>
         <ExternalLinkIcon className="h-4 w-4 flex-none" />
       </p>
+
+      <SiteOwnerEditLink
+        id={_id}
+        type="project"
+        className="absolute right-3 top-3 z-30 flex h-7 w-7 items-center justify-center rounded-full bg-white/80 text-zinc-500 shadow-sm ring-1 ring-zinc-900/5 backdrop-blur-sm transition hover:bg-white hover:text-indigo-600 dark:bg-zinc-800/80 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-zinc-800 dark:hover:text-white"
+      />
 
       <AnimatePresence>
         {isHovering && (

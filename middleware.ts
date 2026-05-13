@@ -56,12 +56,12 @@ export default authMiddleware({
   beforeAuth: beforeAuthMiddleware,
   publicRoutes: [
     '/',
-    '/studio(.*)',
+
     '/api(.*)',
     '/blog(.*)',
     '/confirm(.*)',
     '/projects',
-    '/guestbook',
+
     '/newsletters(.*)',
     '/about',
     '/rss',

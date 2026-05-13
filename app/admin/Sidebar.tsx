@@ -9,6 +9,7 @@ import {
   DashboardIcon,
   HomeIcon,
   NewCommentIcon,
+  PencilSwooshIcon,
   SubscriberIcon,
   TiltedSendIcon,
 } from '~/assets'
@@ -17,6 +18,7 @@ import logo from './../apple-icon.png'
 
 const navigation = [
   { name: '仪表盘', href: '', icon: DashboardIcon },
+  { name: '内容管理', href: '/studio', icon: PencilSwooshIcon },
   { name: '评论', href: '/comments', icon: NewCommentIcon },
   { name: '订阅', href: '/subscribers', icon: SubscriberIcon },
   { name: 'Newsletters', href: '/newsletters', icon: TiltedSendIcon },
@@ -25,6 +27,7 @@ const navigation = [
 export function Sidebar() {
   const pathname = usePathname()
   function isActive(href: string) {
+    if (href.startsWith('/')) return pathname === href
     return pathname === `/admin${href}`
   }
 
@@ -43,7 +46,7 @@ export function Sidebar() {
                   <li key={item.name}>
                     <Link
                       prefetch={false}
-                      href={`/admin${item.href}`}
+                      href={item.href.startsWith('/') ? item.href : `/admin${item.href}`}
                       className={clsxm(
                         isActive(item.href)
                           ? 'bg-gray-50 text-indigo-600 dark:bg-slate-800 dark:text-white'
